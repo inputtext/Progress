@@ -1,9 +1,9 @@
-const btn =document.querySelector("button");
+/* const btn =document.querySelector("button");
 const div =document.querySelector("div");
 const main =document.querySelector("main");
 const body =document.body;
 
-
+// Event Propagation
 //CAPTURING :
 btn.addEventListener(
     "click",
@@ -35,7 +35,7 @@ body.addEventListener(
     console.log("body triggered");
     },
     {capture:true}
-);
+); */
 /* {capture:true} || {bubble:false}*/
 
 
@@ -44,7 +44,7 @@ body.addEventListener(
     "click",
     ()=>{
     console.log("btn tiggered")
-    },
+    }
 );
 
 div.addEventListener(
@@ -87,6 +87,41 @@ body.addEventListener(
 ); */
 
 
+
+//submit events
+
+//form handling: form reloads the webpage , here is the solution
+const form  =document.querySelector("form");
+const name =document.querySelector("#name");
+const email =document.querySelector("#email");
+const users =document.querySelector(".users")
+
+form.addEventListener("submit",(events)=>{
+    events.preventDefault(); // stops the form to reload the page
+    let naam=name.value;
+    let mail =email.value;
+    if(naam.trim()==="" && mail.trim()==="")return; //null safety
+    users.innerHTML +=`
+        <div class="user-card">
+            <div class="img">
+                <img src="https://plus.unsplash.com/premium_photo-1692641346503-730862a6d3a2?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="image here ">
+            </div>
+            <div class="text">
+                <h3>Name : ${naam}</h3>
+                <p>E-mail : ${mail}</p>
+            </div>
+        </div>
+        `
+    form.reset(); //clears the input values after clicked the submission buttons
+
+});
+
+/* to see the text inputted
+console.log(events.target[0].value); // (way 2 ) DOM mei target rehta hai harr baar , usmei value hai iski
+console.log(events.target[1].value);
+
+way 1 recommended : console.log(name.value);
+console.log(email.value); */
 
 
 
