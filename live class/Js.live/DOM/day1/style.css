@@ -1,0 +1,26 @@
+@font-face {
+    font-family: calligraphy;
+    src: url(MapleMono-NF-Bold.ttf);
+}
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+
+}
+main{
+    height: 100%;
+    width: 100%;
+    color: brown;
+    font-size: 100px;
+    background-color: burlywood;
+    font-family: calligraphy;
+}
+.box{
+    background-color: lavender;
+}
+

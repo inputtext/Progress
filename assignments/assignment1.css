@@ -1,0 +1,197 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body{
+  background: #f7f4f0;
+  padding: 30px 60px; /* top bottom &right left */
+  color: #222;
+}
+
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.logo{
+  font-size: 45px;
+  font-weight: 500;
+}
+
+.nav-links{
+  display: flex;
+  gap: 40px;
+  list-style: none;
+}
+
+.nav-links li{
+  cursor: pointer;
+}
+
+.active{ 
+  border-bottom: 3px solid #8a8f72;
+  padding-bottom: 5px;
+}
+
+.icons{
+  display: flex;
+  gap: 20px;
+  font-size: 25px;
+}
+
+
+
+.main{
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+
+
+.left{
+  width: 30%;
+}
+
+.collection{
+  color: #7a8366;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.left h1{
+  font-size: 90px;
+  line-height: 0.9;
+  font-family: serif;
+  margin-bottom: 25px;
+}
+
+.line{
+  width: 70px;
+  height: 2px;
+  background: #7a8366;
+  margin-bottom: 25px;
+}
+
+.desc{
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.colors{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.color-box{
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+}
+
+.green{
+  background: #8a8f72;
+}
+
+.white{
+  background: #ece7df;
+}
+
+.pink{
+  background: #ddb8b8;
+}
+
+.details h2{
+  margin-bottom: 15px;
+}
+
+.details p{
+  color: #555;
+  line-height: 1.7;
+}
+
+
+
+.center{
+  width: 50%;
+  position: relative;
+}
+
+.center img{
+  width: 100%;
+  border-radius: 30px;
+  height: 700px;
+  object-fit: cover;
+}
+
+.price{
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: white;
+  padding: 15px 25px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.rating{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: white;
+  padding: 15px 25px;
+  border-radius: 20px;
+}
+
+.center button{
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: none;
+  background: #7a8366;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+
+
+.right{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.right img{
+  width: 120px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+
+
+.features{
+  margin-top: 40px;
+  background: white;
+  border-radius: 25px;
+  padding: 30px;
+
+  display: flex;
+  justify-content: space-around;
+}
+
+.feature h3{
+  font-weight: 500;
+}

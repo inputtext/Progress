@@ -1,0 +1,53 @@
+@font-face {
+    font-family: calli;
+    src: url(./Sephora\ &\ Hayden.ttf);
+}
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+.outerr{
+    background-color: lavenderblush;
+    display: flex;
+    overflow: hidden;
+    
+
+}
+.inner{/* for diff words */
+    background-color: rgb(212, 127, 212);
+    display: flex;
+    font-family: calli;
+    font-size: 10px;
+    animation-name: move;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    
+}
+h1{
+    padding: 10px; /* for spacing between h1 */
+}
+/* h4{  for constant word
+    background-color: beige;
+    animation-name: move;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    
+} */
+
+
+
+@keyframes move{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}

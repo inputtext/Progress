@@ -1,0 +1,31 @@
+*{ /* CSS boiler plate to remove all the margins and extra spaces acquired by the html by default */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{ /* parents of div */
+    background-color: rgb(31, 39, 42);
+    height: 100%;
+}
+div{
+    background-color: darkslateblue;
+    height: 10%;
+}
+/* it is necessary to give the height to the parent first to apply the effeccts on the children  , so here we have given the height first to the html and body to apply changes on the div  
+
+agar body ki height kam karonge toh effect padenga children pe */
+
+
+
+
+
+/* boiler plate of CSS to LEARN !!!! */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}

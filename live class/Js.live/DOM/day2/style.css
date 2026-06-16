@@ -1,0 +1,22 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+main{
+    background-color: burlywood;
+    height: 100%;
+    width: 100%;
+}
+main h1{
+    height: 10%;
+    width: 100%;
+    background-color: lavender;
+}
+/* main.h1 main jiski class h1 ho*/
+/* main,h1 main and h1 dono ko target karna
+main h1 :  main ke andar ka h1 */

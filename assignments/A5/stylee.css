@@ -1,0 +1,221 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+.pg1 {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-image: url("https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  margin: 10px 10px 0px 10px;
+}
+header {
+  width: 100%;
+  height: 100%;
+  
+
+}
+.upnav {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  align-items: center;
+}
+.upnav h2 {
+  color: white;
+}
+.upnav .right {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  align-items: center;
+  font-size: 20px;
+
+}
+.upnav .right a{
+    color: white;
+}
+.midtext{
+    position:absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.midtext #lm{
+    font-size: 150px;
+    color: white;
+}
+.midtext #hm{
+    display:flex;
+    justify-content: center;
+}
+/* page 2 */
+.pg2{
+    height: 100%;
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #f5f7f7;
+    box-shadow: 0px 5px 10px grey;
+   
+}
+#boxes{
+    height: 30%;
+    width: 30%;
+}
+
+.pg2 h1{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 80px;
+    font-weight: 300;
+}
+#boxes{
+    height: 55%;
+    width: 90%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 300px;
+    gap: 60px;
+
+    
+}
+#boxes .box1{
+    height: 100%;
+    width: 20%;
+    background-color: rgb(255, 255, 255);
+}
+#boxes .box2{
+    height: 100%;
+    width: 20%;
+    background-color: rgb(255, 255, 255);
+}
+#boxes .box3{
+    height: 100%;
+    width: 20%;
+    background-color: rgb(255, 255, 255);
+}
+.box1 .img{
+    height: 50%;
+    background-color: rgb(255, 255, 255);
+    background-image: url("https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTgUcL5Y2ZzSUfj3K_PpVH7Gd2MXcsKyROwhqDODgRHtnu-D6c_");
+    background-size: cover;
+    
+}
+.box2 .img{
+    height: 50%;
+    background-color: rgb(255, 255, 255);
+    background-image: url("https://i1.sndcdn.com/avatars-000683591861-5raryt-t240x240.jpg");
+    background-size: cover;
+    
+}
+.box3 .img{
+    height: 50%;
+    background-color: rgb(255, 255, 255);
+    background-image: url("https://libraryitems.insighttimer.com/q2h0s9s0z1e8y1r5b9k8v3a6c3k6g2y2g5x8y6f3/pictures/tiny_rectangle_large.jpeg");
+    background-size: cover;
+    
+}
+.box1{
+    position: relative;
+    border: 1px solid grey;
+    box-shadow: 0px 10px 10px grey; /* horizontal vertical blur color */
+}
+.box2{
+    position: relative;
+    border: 1px solid grey;
+    box-shadow: 0px 10px 10px grey;
+}
+.box3{
+    position: relative;
+    border: 1px solid grey;
+    box-shadow: 0px 10px 10px grey;
+}
+.box1 .text{
+    margin-top: 40px;
+    position:absolute;
+    left: 2%; 
+    font-size: 25px;
+    
+    
+}
+.box2 .text{
+    margin-top: 40px;
+    position:absolute;
+    left: 2%; 
+    font-size: 25px;
+}
+.box3 .text{
+    margin-top: 40px;
+    position:absolute;
+    left: 2%; 
+    font-size: 25px;
+}
+
+/* pg3  */
+
+.pg3{
+    height: 100%;
+    width: 100%;
+    position:relative;
+
+}
+.pg3 .left{
+    display: inline-block;
+    background-image: url("https://w0.peakpx.com/wallpaper/369/516/HD-wallpaper-plants-leaves-tropics-green.jpg");
+    background-size: cover;
+    height: 100%;
+    width: 50%;
+    margin-top: 30px;
+    margin-left: 10px;
+    
+}
+.pg3 .right{
+    position:absolute;
+    top: 50%;
+    gap: 200px;
+    display:flex;
+    display: inline-block;
+}
+.pg3 .right h1{
+    position:absolute;
+    top:-90%;
+    left: 40%;
+    gap: 200px;
+    display:flex;
+
+}
+.pg3 .right h2{
+    margin-left: 10px;
+    
+}
+
+.pg4{
+    height: 100%;
+    margin:50px 0px 0px 0px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+    background-image: url("https://plus.unsplash.com/premium_photo-1671807185041-f87439dfd82d?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    color: white;
+
+}
+.pg4 h1{
+    font-size: 90px;
+}

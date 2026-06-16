@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Outfit", sans-serif;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+    background-color: #f4f4f4;
+}
+
+.main{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    padding: 40px 80px;
+}
+
+/* STAR */
+
+.star{
+    position: absolute;
+    left: 20px;
+    top: 40px;
+
+    font-size: 70px;
+    color: #7a0000;
+}
+
+/* SIDE TEXT */
+
+.side-text{
+    position: absolute;
+    left: 15px;
+    top: 420px;
+}
+
+.side-text h3{
+    font-size: 20px;
+    color: #7a0000;
+    font-weight: 400;
+    line-height: 28px;
+    text-decoration: underline;
+}
+
+/* TOP RIGHT */
+
+.future{
+    position: absolute;
+    right: 40px;
+    top: 50px;
+
+    font-size: 12px;
+    color: #7a0000;
+    text-align: right;
+}
+
+/* HERO */
+
+.hero{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero h1{
+    font-size: 88px;
+    line-height: 82px;
+    text-align: center;
+    color: #660000;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.light{
+    color: #c3b0b0;
+    font-weight: 300;
+}
+
+.circle{
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(to right,#4a0000,#ff5b1f);
+    border-radius: 50%;
+    vertical-align: middle;
+    margin: 0 10px;
+}
+
+/* DESCRIPTION */
+
+.desc{
+    margin-top: 25px;
+    color: #7c6464;
+    text-align: left;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+/* CARDS */
+
+.cards{
+    display: flex;
+    gap: 22px;
+    margin-top: 40px;
+}
+
+.card{
+    width: 250px;
+    height: 320px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* BOTTOM SECTION */
+
+.bottom{
+    margin-top: 120px;
+    text-align: center;
+}
+
+.bottom h2{
+    font-size: 72px;
+    line-height: 70px;
+    color: #6b0000;
+    font-weight: 500;
+}
+
+.bottom h2 span{
+    color: #c5b2b2;
+    font-weight: 300;
+}
+
+.bottom p{
+    margin-top: 25px;
+    color: #7d6666;
+    font-size: 14px;
+}

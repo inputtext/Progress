@@ -1,0 +1,20 @@
+h1{
+    color: blanchedalmond; /* key value pair , color is a key and the color givven is a value */
+}
+
+*{
+    color: antiquewhite;/*  universal selector*/
+    background-color: rgb(220, 135, 163);
+}
+p{
+    color: lavender;
+}
+#uq{/* unique /id selector */
+    color: burlywood;
+}
+.name{/* Class selector */
+    color: rgb(223, 100, 125);
+}
+h1,p,span{
+    color : rgb(255, 176, 176);
+}

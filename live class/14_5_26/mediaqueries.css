@@ -1,0 +1,138 @@
+:root{
+  --kind : red;
+  
+}
+@font-face {
+  font-family: calli;
+  src: url(./Sephora\ &\ Hayden.ttf);
+}
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  font-family: calli;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-color: maroon;
+  
+}
+main {
+  min-height: 100vh;
+  min-width: 100vw;
+  padding: 10px;
+  background-color: burlywood; 
+  border-radius: 23px;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 30px;
+  background-color:brown;
+  padding: 12px;
+  border-radius: 5px;
+  
+}
+.part2 {
+  min-width: 80%;
+  min-height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+
+
+header {
+  display: flex;
+  height: 90px;
+  align-items: center;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.welcome-track {
+  display: flex;
+  gap: 60px;
+}
+header h2 {
+  animation-name: move;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
+  font-size: 40px;
+  font-family: calli;
+  background-color: transparent;
+  display: inline-block;
+  flex-shrink: 0;
+  font-weight: 100;
+  
+}
+
+
+
+.outer {
+  height: calc(100vh - 130px);
+  width: 100%;
+  background-color: burlywood;
+  border: 10px solid brown;
+  overflow: hidden;
+
+}
+.inner {
+  display: flex;
+  gap: 20px;
+  height: 100%;
+  animation-name: move;
+  animation-timing-function: linear;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  
+}
+
+.inner img {
+  width: 33.33em;
+  height: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+
+/* respomnsiveness */
+@media (max-width: 612px) {
+  nav {
+    background-color: brown;
+    padding: 10px 20px;
+    border-radius: 20px;
+  }
+  h5 {
+    display: block;
+    position:absolute;
+    left: 90%;
+  }
+  h4 {
+    display: none;
+    height: 10vh;
+    width: 10vw;
+  }
+  header h2 {
+    font-size: 8vh;
+  }
+  .inner{
+    max-width: calc(100vw - 100px);
+    
+  }
+}
+
+/* Animations */
+@keyframes move {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}

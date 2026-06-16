@@ -1,0 +1,30 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+.container{
+    display:grid; /* converts the divs into rows  */
+    grid-template-columns: 50% 50%;  /* 1fr 1fr 1fr - fractions */
+    gap: 20px ;
+    /* grid prop ^^ */
+    width: 100%;
+    height: 60%;
+    background-color: brown;
+    margin-top: 100px;
+}
+.box{
+    background-color: burlywood;
+    height: 100%;
+    width: 100%;
+    margin-bottom: 0px;
+    /* to center the item in the box of a div , apply the below things of flex box  */
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+}

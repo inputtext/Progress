@@ -1,0 +1,165 @@
+@font-face {
+    font-family: reckless;
+    src: url(./Assets/fonts/RecklessCondensedS-TRIAL-Book.woff);
+}
+@font-face {
+    font-family: robotoMono;
+    src: url(./Assets/fonts/RobotoMono-Regular.ttf);
+}
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+main{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #fffefa;
+    display: grid;
+   /*  grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 0.5fr 1fr 0.7fr 0.5fr 0.3fr 0.7fr;
+
+    grid-template-areas:
+    "headleft" "headMid"  "headright"
+    ; */
+}
+nav{
+    width: calc(100%-1.5vh); /* since margin =1.5vh */
+    height: 7vh;
+    background-color: #fffefa;
+    padding: 0 2rem;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    position: relative;
+    border-radius: 22px;
+    border: 2px solid black;
+    margin : 1vh 0.5vh 0vh 1vh ;
+    /* font-family: reckless; */
+}
+.headerLeft{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    /* font-size: clamp(2rem,5vh,5rem);/* clamp(min,preferred,max) */
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 27px;
+    font-family: reckless;
+}
+.logoMid{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    position:absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+.headerRight{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    font-size: 17px;
+    font-family: robotoMono;
+    font-weight: 500;
+    line-height: 27px;
+   /*  letter-spacing: 1px; */
+}
+.logoMid img{
+    width: 100%;
+    height: 50px;
+}
+.headerLeft img {
+    width: 100%;
+    height: 20px;
+}
+.headerRight img{
+    height: 3vh;
+}
+main{
+    background-image: url(./Assets/images/bgimages/cere-memorial_matcha_wide.webp);
+    background-size: cover;
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* for font and images , we will use diff units  */
+
+/* rem :  Relative to root font size : */
+/* html{
+    font-size : 16px;
+}  *//* 1 rem =16px */

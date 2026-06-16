@@ -1,0 +1,47 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+main{
+    height: 100%;
+    width: 100%;
+    display:grid;
+
+    gap: 5px;
+
+    padding: 20px;
+
+    grid-template-columns: 30% 30% 40%;
+    grid-template-rows: 50% 50% ;
+
+    grid-template-areas:
+    "upleft upmid rightfull"
+    "bottomleft bottomleft rightfull"
+    ;
+}
+.upleft{
+    background-color: brown;
+    grid-area: upleft;
+    border-radius: 15px;
+}
+.upmid{
+    background-color: burlywood;
+    grid-area: upmid;
+    border-radius: 15px;
+}
+.rightfull{
+    background-color: purple;
+    grid-area: rightfull;
+    border-radius: 15px;
+}
+.bottomleft{
+    background-color: palevioletred;
+    grid-area: bottomleft;
+    border-radius: 15px;
+}

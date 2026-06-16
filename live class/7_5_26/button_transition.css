@@ -1,0 +1,28 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    background-color: grey;
+}
+.button{
+    height: 10%;
+    width: 20%;
+    background-color: rgb(228, 189, 128);
+    color:white;
+    position:absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border: 5px ridge rgb(0, 0, 0);
+}
+.button:active{
+    transition: all ease 0.1s;
+    background-color: rgb(151, 135, 238);
+    color: rgb(0, 0, 0);
+    border: 5px ridge rgb(239, 189, 80);
+    
+}

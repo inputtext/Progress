@@ -1,0 +1,115 @@
+* {
+  background-color: lavender;
+}
+* {
+  /* CSS boiler plate  */
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+.legend {
+  color: purple;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 100px;
+  margin-bottom: 20px; /* new */
+}
+.courses,
+.CC {
+  color: black;
+  text-align: center;
+}
+
+.FS {
+  color: black;
+  background-color: beige;
+  text-align: center;
+}
+footer {
+  color: green;
+  text-align: center;
+}
+header {
+  color: black;
+  text-align: center;
+  font-size: 70px;
+  font-family: 'Courier New', Courier, monospace;
+  line-height: 150px; /* new */
+  word-spacing: 10px; /* new */ /* words ke beeech ki spoace  */
+  /* letter-spacing: -100px;  revert the words , mirror words ( done by myself*/
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+/*.box {
+   width: 500px;
+  height: 500px;
+  background-color: rgb(255, 255, 255);
+  border: 15px ridge purple; /* expands inside */
+  /* margin-left: 300px;
+  padding-left: 15px;
+  background-image: url(https://plus.unsplash.com/premium_photo-1684445034763-013f0525c40c?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover;
+  background-position: center; 
+} */
+
+.bb {
+  width: 500px;
+  height: 500px;
+  background-color: white;
+  border: 15px ridge purple;
+  margin-left: 20px;
+  padding: 20px;
+  background-image: url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee');
+  background-size: cover;
+  margin-left: 250px;
+
+  /* background ki property backgroud image ke liye use kiye hai  */
+}
+.container{
+  display :flex;
+  align-items: center;
+  gap: 20px;
+  justify-content:space-evenly;
+  flex-direction: column;
+  /* flexbox properties */
+  height: 40%;
+  width: 100%;
+  margin-top: 50px;
+  background-color: beige  ;
+  
+}
+.box{
+  height: 50%;/* 50% of the parent container */
+  width: 20%; /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+  background-color: bisque; /* changes in this, changes the below ones */
+}
+#b1{
+  background-color: purple;
+  width: 20%;
+  margin: 0%; /* margin between the b1b2b3 */
+}
+#b2{
+  background-color: palegoldenrod;
+  width: 20%;
+  margin: 0%;
+}
+#b3{
+  background-color: goldenrod;
+  width: 20%;
+  margin: 0%;
+}
+/* lexbox  -vertical to hozi */
+
+/* comtainer>box>b1b2b3 -parent to child */
+/* padding is the margin of inside 
+Margin - bahar 
+padding - andar  */
+
+/* border px solid color */
+/* padding top right bottom left (clockwise) /*

@@ -1,0 +1,47 @@
+:root{
+    --atlas-font-family: Figtree, sans-serif;
+}
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+main{
+    min-height: 100vh;
+    width: 100%;
+}
+.pg1{
+    height: 100%;
+    width: 100%;
+}
+nav{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    font-size: 10px;
+    background-color: burlywood;
+}
+.navleft{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+.navright{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+   gap: 10px;
+}
+.navmid{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    
+   
+}
