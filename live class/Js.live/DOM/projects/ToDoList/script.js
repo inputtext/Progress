@@ -76,7 +76,9 @@ todoList.addEventListener("click",(e)=>{
 
 
 
-//value.trim() : it removes the white spaces and blankspaces and returns a new string without mutating the old one
+//value.trim() : it removes the white spaces and
+// blankspaces and returns a new string without mutating the old one
 
-//inp.value; //prints the value inner html because it updates in real time and replaces everything inside a div
+//inp.value; //prints the value inner html because it
+//  updates in real time and replaces everything inside a div
 
