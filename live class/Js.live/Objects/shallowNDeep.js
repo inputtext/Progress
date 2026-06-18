@@ -44,7 +44,7 @@ for(let a in object ){
 
 var a = JSON.stringify(object);
 console.log(a); // prints all the content in the object in string format
-var object2 =JSON.parse(a); // Converts the string into the object fully
+var object2 =JSON.parse(a); // (new object )Converts the string into the object fully
 console.log(object2);
 
 object2.collegeDetails.collegeID = (String)("ABC");
