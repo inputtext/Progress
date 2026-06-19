@@ -1,0 +1,101 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> /Contents 6 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+6 0 obj
+<< /Length 1482 >>
+stream
+BT
+/F2 20 Tf
+50 735 Td
+(What does event mean in JavaScript?) Tj
+
+/F1 12 Tf
+0 -35 Td
+(In JavaScript, an event is the object that the browser gives to your function) Tj
+0 -16 Td
+(when something happens on the page, such as a click, key press, scroll, or input.) Tj
+
+0 -32 Td
+(Your code:) Tj
+
+/F1 11 Tf
+0 -20 Td
+(const main = document.querySelector\("main"\);) Tj
+0 -15 Td
+(main.addEventListener\("click", \(events\) => {) Tj
+0 -15 Td
+(    console.log\(events\);) Tj
+0 -15 Td
+(});) Tj
+
+/F1 12 Tf
+0 -35 Td
+(Here, "click" is the event type. It means the function should run whenever) Tj
+0 -16 Td
+(the user clicks inside the main element.) Tj
+
+0 -32 Td
+(The variable named "events" receives the click event object. This object contains) Tj
+0 -16 Td
+(details about the click, like what was clicked and where the mouse was.) Tj
+
+0 -32 Td
+(Common event properties:) Tj
+
+0 -22 Td
+(event.type    -> tells the event name, for example "click") Tj
+0 -18 Td
+(event.target  -> tells the exact element that was clicked) Tj
+0 -18 Td
+(event.clientX -> tells the mouse X position) Tj
+0 -18 Td
+(event.clientY -> tells the mouse Y position) Tj
+
+0 -35 Td
+(Usually developers name this parameter "event" or "e", like this:) Tj
+
+/F1 11 Tf
+0 -20 Td
+(main.addEventListener\("click", \(event\) => {) Tj
+0 -15 Td
+(    console.log\(event.target\);) Tj
+0 -15 Td
+(});) Tj
+
+/F1 12 Tf
+0 -35 Td
+(In simple words:) Tj
+
+/F2 12 Tf
+0 -20 Td
+(event is the click report/details sent by the browser to your function.) Tj
+ET
+endstream
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000251 00000 n 
+0000000321 00000 n 
+0000000396 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+1929
+%%EOF

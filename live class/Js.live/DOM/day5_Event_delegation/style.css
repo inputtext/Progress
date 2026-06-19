@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    min-height: 100dvh;
+    overflow-x: hidden;
+    background-color: rgb(25, 25, 70);
+    padding: clamp(12px, 3vw, 24px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: clamp(12px, 2.5vh, 20px);
+    position: relative;
+}
+
+main {
+    width: min(100%, 460px);
+    height: min(70vh, 650px);
+    min-height: 300px;
+    background-color: bisque;
+    border: 3px solid white;
+    border-radius: clamp(18px, 5vw, 32px);
+    padding: clamp(10px, 3vw, 20px);
+    position: relative;
+    overflow: hidden;
+}
+
+button {
+    min-width: 100px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    touch-action: manipulation;
+}
+
+.box {
+    position: absolute;
+    width: clamp(42px, 15%, 70px);
+    height: clamp(42px, 10%, 65px);
+    background-color: rgb(28, 28, 71);
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+#timer {
+    display: flex;
+    justify-content: space-between;
+    width: min(100%, 460px);
+    min-height: 52px;
+    background-color: brown;
+    border-radius: 32px;
+    padding: 13px 20px;
+    color: white;
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+}
+
+/* Game-over screen */
+#overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(255, 235, 205, 0.85);
+    color: brown;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: clamp(1rem, 5vw, 1.875rem);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+@media (max-width: 480px) {
+    main {
+        height: 65vh;
+        min-height: 280px;
+    }
+
+    #timer {
+        padding-inline: 16px;
+    }
+}
+
+@media (max-height: 600px) and (orientation: landscape) {
+    body {
+        gap: 8px;
+        padding-block: 8px;
+    }
+
+    main {
+        height: 65vh;
+        min-height: 180px;
+    }
+
+    #timer {
+        min-height: 40px;
+        padding-block: 8px;
+    }
+
+    button {
+        padding-block: 7px;
+    }
+}
