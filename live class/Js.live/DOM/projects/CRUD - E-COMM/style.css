@@ -1,0 +1,205 @@
+@font-face {
+    font-family:victor ;
+    src: url(./fonts/VictorMono-Regular.ttf);
+}
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: victor;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+
+
+}
+main{
+    height: 100vmin;
+    width: 100%;
+    background-color:rgb(186, 148, 186);
+    padding: 12px;
+}
+nav{
+    height: 10%;
+    width: 100%;
+    background-color: rebeccapurple;
+    border-radius: 32px;
+    box-shadow: 5px 5px ;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+ /*    margin-bottom: 25px; */
+    margin: 12px 0px 40px 0px;
+}
+nav button{
+    background-color: rosybrown;
+    border: none;
+    border-radius: 12px;
+    padding: 5px 5px;
+    box-shadow: 3px 3px;
+    font-weight:600;
+    cursor: pointer;
+}
+.products{
+    min-height: 20em;
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;/*  the elemtns must be sideways */
+    align-items: flex-start;
+    gap: 20px;
+    background-size: cover;
+    background-color:rgb(209, 182, 241);
+    border-radius: 32px;
+    padding: 10px;
+    /* to occupy the space left */
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+}
+.product-card{
+    height:auto;
+    width: 100%;
+    background-color: rgba(255, 218, 185, 0.705);
+    border-radius: 22px;
+    padding:20px;
+    box-shadow: 0 0 100px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+/* to fit in the image */
+.img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 2px 2px 5px black;
+
+}
+.img{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+.btn{
+    display: flex;
+    justify-content: space-between;
+
+}
+.btn button{
+    background-color: peachpuff;
+    border: none;
+    padding: 5px 5px;
+    border-radius: 12px;
+    box-shadow: 2px 2px;
+    margin:4px 0px 0px 0px ;
+    font-weight:bold;
+}
+.btn .del{
+    background-color: brown;
+}
+
+.form{
+    height: 100%;
+    width: 100%;
+    box-shadow: 5px 5px 20px burlywood;
+    display:none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 32px;
+    background-color: rgba(255, 234, 215, 0.368);
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    flex-direction: column;
+}
+
+#form{
+    width: 40%;
+    height: 70%;
+    background-color: lavenderblush;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    border: flex;
+
+    border-radius: 10px;
+    padding: 20px;
+    gap: 20px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: -10px 10px 10px gray;
+
+}
+
+.prd-name{
+    border-radius: 12px;
+    padding: 10px;
+    border: 1px solid grey;
+    box-shadow: 2px 2px 5px black;
+    outline: none;
+}
+.prd-des{
+    border-radius: 12px;
+    padding: 10px;
+    border: 1px solid grey;
+    box-shadow: 2px 2px 5px black;
+    outline: none;
+}
+
+.prd-price{
+    border-radius: 12px;
+    padding: 10px;
+    border: 1px solid grey;
+    box-shadow: 2px 2px 5px black;
+    outline: none;
+}
+
+.prd-img{
+    border-radius: 12px;
+    padding: 10px;
+    border: 1px solid grey;
+    box-shadow: 2px 2px 5px black;
+    outline: none;
+
+}
+.btn2{
+    border-radius: 12px;
+    padding: 10px;
+    border: 1px solid grey;
+    box-shadow: 2px 2px 5px black;
+    outline: none;
+    background-color:lemonchiffon;
+}
+.form .cross{
+    display:flex;
+    width: 50%;
+    color: white;
+    font-size: 12px;
+    justify-content: end;
+    cursor: pointer;
+}
+.texttt{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 235, 205, 0.386);
+    border-radius: 12px;
+
+}
+
+.texttt h1{
+    color: grey;
+}

@@ -81,7 +81,7 @@ form.addEventListener("submit", (events) => {
         imageUrl :imgUrl,
     });
 
-    repeat(); // to add new users , 5.add karne ke baad dikhane ke liye screen pe
+    repeat(); //5to add new users , .add karne ke baad dikhane ke liye screen pe
 
     form.reset(); //6.resets the form after submits
 });

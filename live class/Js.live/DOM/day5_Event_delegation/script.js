@@ -1,4 +1,4 @@
-/* const btn5 = document.querySelector("#five");
+const btn5 = document.querySelector("#five");
 btn5.addEventListener("click",(event)=>{
     console.log(event.target); //shows the elemtn which has event on it . ie,. btn5
 });
@@ -13,12 +13,12 @@ buttons.forEach(button=>{  // means for each button , add event listener
 });
 
 
-//event Delegation :helpful in REACT
+//event Delegation :helpful in REACT, instead of applying and event to each of the children of the parent , we apply event listener on the parent itself , and all the childs grabs those events automatically
 const main =document.querySelector("main");
 main.addEventListener("click",(e)=>{
     console.log(e.target);
 });
-*/
+
 
 /* event is an object that has a target property that has the info on which the event is applied
 
@@ -81,7 +81,7 @@ box.classList.add("box");
 
 //random color generator
 const randomColor =()=>{
-    let r =Math.floor(Math.random()*256);
+    let r =Math.floor(Math.random()*256); //this means , we have manually created a random colour like this in css => background-color: rgb(249, 162, 127);
     let g =Math.floor(Math.random()*256);
     let b =Math.floor(Math.random()*256);
     return `rgb(${r},${g},${b})` //for proper colour formatfor css like  rgb(122,155,166);
@@ -125,8 +125,8 @@ btn.addEventListener("click",()=>{
 // for score to increase
 
 box.addEventListener("click",()=>{
-    skore +=1;
-    score.textContent=skore;
+    skore +=1; //incrementing scor variable
+    score.textContent=skore; // displaying the incremented value in score div
 })
 
 
