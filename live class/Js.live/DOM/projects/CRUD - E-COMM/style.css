@@ -10,19 +10,17 @@
     font-family: victor;
 }
 html,body{
-    height: 100%;
+    min-height: 100%;
     width: 100%;
-
-
 }
 main{
-    height: 100vmin;
+    min-height: 100vh;
     width: 100%;
     background-color:rgb(186, 148, 186);
     padding: 12px;
 }
 nav{
-    height: 10%;
+    min-height: 72px;
     width: 100%;
     background-color: rebeccapurple;
     border-radius: 32px;
@@ -57,7 +55,7 @@ nav button{
     padding: 10px;
     /* to occupy the space left */
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(min(250px, 100%),1fr));
 }
 .product-card{
     height:auto;
@@ -90,6 +88,7 @@ nav button{
     display: flex;
     flex-direction: column;
     gap: 7px;
+    overflow-wrap: anywhere;
 }
 .btn{
     display: flex;
@@ -110,7 +109,7 @@ nav button{
 }
 
 .form{
-    height: 100%;
+    min-height: 100%;
     width: 100%;
     box-shadow: 5px 5px 20px burlywood;
     display:none;
@@ -118,21 +117,22 @@ nav button{
     justify-content: center;
     border-radius: 32px;
     background-color: rgba(255, 234, 215, 0.368);
-    position: absolute;
+    position: fixed;
     top: 0%;
     left: 0%;
     flex-direction: column;
+    padding: 20px;
+    overflow-y: auto;
+    z-index: 10;
 }
 
 #form{
-    width: 40%;
-    height: 70%;
+    width: min(520px, 100%);
+    min-height: 430px;
     background-color: lavenderblush;
     display:flex;
     flex-direction: column;
     align-items: center;
-    border: flex;
-
     border-radius: 10px;
     padding: 20px;
     gap: 20px;
@@ -142,6 +142,11 @@ nav button{
     flex-direction: column;
     box-shadow: -10px 10px 10px gray;
 
+}
+
+#form input{
+    width: 100%;
+    max-width: 380px;
 }
 
 .prd-name{
@@ -185,7 +190,7 @@ nav button{
 }
 .form .cross{
     display:flex;
-    width: 50%;
+    width: min(520px, 100%);
     color: white;
     font-size: 12px;
     justify-content: end;
@@ -202,4 +207,65 @@ nav button{
 
 .texttt h1{
     color: grey;
+    text-align: center;
+    font-size: clamp(1.25rem, 4vw, 2rem);
+}
+
+@media (max-width: 768px){
+    main{
+        padding: 8px;
+    }
+
+    nav{
+        margin: 8px 0 24px;
+        padding: 16px;
+        border-radius: 22px;
+    }
+
+    .products{
+        gap: 14px;
+        padding: 12px;
+        border-radius: 22px;
+    }
+
+    .product-card{
+        padding: 16px;
+    }
+
+    #form{
+        min-height: auto;
+        padding: 24px 16px;
+    }
+}
+
+@media (max-width: 480px){
+    nav{
+        min-height: 64px;
+    }
+
+    nav h1{
+        font-size: 1.35rem;
+    }
+
+    nav button,
+    .btn button{
+        padding: 8px 10px;
+    }
+
+    .img{
+        height: 180px;
+    }
+
+    .form{
+        padding: 12px;
+    }
+
+    .form .cross{
+        font-size: 10px;
+    }
+
+    .create-prd2{
+        font-size: 1.5rem;
+        text-align: center;
+    }
 }
