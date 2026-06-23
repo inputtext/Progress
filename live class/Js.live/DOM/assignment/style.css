@@ -44,6 +44,7 @@ body{
     list-style:none;
     gap:35px;
     font-size:18px;
+    cursor:pointer
 }
 
 .nav-buttons{
@@ -203,4 +204,7 @@ body{
     padding: 10px;
     background-color: rgb(92, 46, 92);
     color: white;
+}
+#signin{
+    cursor: pointer;
 }
