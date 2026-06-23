@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Master</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>📋 Task Master</h1>
+
+            <button id="themeBtn">
+                🌙 Theme
+            </button>
+        </header>
+
+        <section class="controls">
+
+            <input
+                type="text"
+                placeholder="Enter Task..."
+                id="taskInput"
+            >
+
+            <select id="category">
+                <option>Study</option>
+                <option>Work</option>
+                <option>Personal</option>
+            </select>
+
+            <button id="addBtn">
+                Add Task
+            </button>
+
+        </section>
+
+        <section class="stats">
+
+            <div class="card">
+                <h3>Total Tasks</h3>
+                <p>12</p>
+            </div>
+
+            <div class="card">
+                <h3>Completed</h3>
+                <p>5</p>
+            </div>
+
+            <div class="card">
+                <h3>Pending</h3>
+                <p>7</p>
+            </div>
+
+        </section>
+
+        <section class="search-box">
+
+            <input
+                type="text"
+                placeholder="Search Tasks..."
+            >
+
+        </section>
+
+        <section class="task-list">
+
+            <div class="task-card">
+
+                <div>
+                    <h3>Complete DOM Project</h3>
+                    <span>Study</span>
+                </div>
+
+                <div class="actions">
+                    <button>✔</button>
+                    <button>✏</button>
+                    <button>🗑</button>
+                </div>
+
+            </div>
+
+            <div class="task-card completed">
+
+                <div>
+                    <h3>Learn Event Delegation</h3>
+                    <span>Study</span>
+                </div>
+
+                <div class="actions">
+                    <button>✔</button>
+                    <button>✏</button>
+                    <button>🗑</button>
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+</body>
+</html>

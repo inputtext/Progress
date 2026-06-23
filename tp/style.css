@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Space Grotesk',sans-serif;
+}
+
+body{
+    background:#FFF7D6;
+    padding:40px;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+/* HEADER */
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+}
+
+header h1{
+    font-size:3rem;
+    font-weight:900;
+}
+
+#themeBtn{
+    padding:12px 20px;
+}
+
+/* COMMON */
+
+button,
+input,
+select{
+    border:4px solid black;
+    background:white;
+    padding:15px;
+    font-size:1rem;
+    font-weight:700;
+    box-shadow:6px 6px 0 black;
+    transition:.15s;
+}
+
+button:hover{
+    transform:translate(10px,10px);
+    box-shadow:2px 2px 0 black;
+    cursor:pointer;
+}
+
+input,
+select{
+    width:100%;
+}
+
+/* CONTROLS */
+
+.controls{
+    display:grid;
+    grid-template-columns:2fr 1fr auto;
+    gap:20px;
+    margin-bottom:30px;
+}
+
+/* STATS */
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    margin-bottom:30px;
+}
+
+.card{
+    background:#FF7A59;
+    border:4px solid black;
+    box-shadow:8px 8px 0 black;
+    padding:25px;
+}
+
+.card h3{
+    margin-bottom:10px;
+}
+
+.card p{
+    font-size:2rem;
+    font-weight:900;
+}
+
+/* SEARCH */
+
+.search-box{
+    margin-bottom:30px;
+}
+
+/* TASKS */
+
+.task-list{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.task-card{
+    background:#fff;
+    border:4px solid black;
+    box-shadow:8px 8px 0 black;
+
+    padding:20px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.task-card h3{
+    margin-bottom:8px;
+}
+
+.task-card span{
+    background:#FFE14D;
+    border:2px solid black;
+    padding:4px 10px;
+    font-weight:bold;
+}
+
+.actions{
+    display:flex;
+    gap:10px;
+}
+
+.actions button{
+    width:55px;
+    height:55px;
+}
+
+.completed{
+    background:#A6FF96;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .controls{
+        grid-template-columns:1fr;
+    }
+
+    .stats{
+        grid-template-columns:1fr;
+    }
+
+    .task-card{
+        flex-direction:column;
+        gap:20px;
+        align-items:flex-start;
+    }
+
+}

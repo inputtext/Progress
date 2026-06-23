@@ -16,7 +16,7 @@ back.addEventListener("click",()=>{
 
 /* main step 2 */// an array for maintaining the datasets of the created products ;'step4
 
-const productsArray =[];
+const productsArray =JSON.parse(localStorage.getItem("products")) || []; //local storage ke andar ka data in the form of objects , which is stored in the products array , whenever a new item will be get added , it will be stored in the local storage and also in the products array
 
 
 
@@ -59,13 +59,13 @@ let ui = ()=>{
                     <button onclick="deletePrd('${index}')" class="del">Delete</button>
                 </div>
             </div>`
-    })
-}
+    });
+};
 
 
 
 
-
+ui();
 
 
 
@@ -100,9 +100,11 @@ form.addEventListener("submit",(event)=>{ //event = jismei event lagaya usko dis
 
     if(updateIndex!==null){ //step14
         productsArray[updateIndex]=obj; //array ke updateindex wale index pe updated value kardo
+        localStorage.setItem("products",JSON.stringify(productsArray)); //last step to store the products on reload
         updateIndex =null;
     }else{
         productsArray.push(obj); //user inputted value pushed into the empty array : step 5
+        localStorage.setItem("products",JSON.stringify(productsArray));
     }
 
    /*  productsArray.push(obj); */ //user inputted value pushed into the empty array : step 5
@@ -143,9 +145,10 @@ const updatePrd = (name)=>{  //argument/property from the inline events "product
 /* main step 5 : delete : Array.splice(start , deletecount  */
 
 const deletePrd= (index)=>{
-    productsArray.splice(index,1);
+    productsArray.splice(index,1);  //(index,dletecount);
+    localStorage.setItem("products",JSON.stringify(productsArray));//updated local storage after prd deletion
     ui();
-}
+};
 
 
 
