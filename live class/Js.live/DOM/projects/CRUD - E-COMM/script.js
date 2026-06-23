@@ -198,6 +198,20 @@ if(updateIndex!==null){
 
 
 
+/* fetch vs axios
+fetch:
+1.fetch is a method in JS to call api
+2.Provided by the browser -> fetch
+3.works in low level
+4.we get the data iin the stream form and we convert it to the data.JSON
+low level means -> fetch =browser
+
+
+axios:
+1.axios is also used to call api but its a framework
+2.standalone framework
+3.works in high level
+4.we directly gets the data 4. */
 
 
 
@@ -215,4 +229,9 @@ if(updateIndex!==null){
 
 
 
-//LocalStorage
+
+
+
+
+
+
