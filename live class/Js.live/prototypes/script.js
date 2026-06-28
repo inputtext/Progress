@@ -76,3 +76,4 @@ branch.__proto__=college2; //branch's properties =  college
 console.log(user1.saySlogan); // we are able to access the sayslogan property of the colllege 2 via the user now
 
 console.log(user1.__proto__); //proto chaining : user=>branch=>college2=>null
+console.log(user1.rating);//user1=>branch =>college =>found

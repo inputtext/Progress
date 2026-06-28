@@ -37,16 +37,16 @@ Real dom => virtual dom => old vs new VDom (reconsciliation(engine))=>works on d
 
 /* 3 steps that runs behind the scenes in the REACT:
 1: React.createElement
-2: React.createRoot
+2: ReactDOM.createRoot
 3: root.render();
  */
 
 /* Always VDom to VDom comparison */
 
-/* till 2015 React followed reconsiliation engine known as "stack", and in 2016 ,new reconsciliation engine "fibre" is introduced */
+/* till 2015 React followed reconsiliation engine known as "stack", and in 2016 ,new reconsciliation engine "fibre" was introduced */
 
 /* stack vs fiber
-stack wasnt that as efficient and optimised  as the fiber is ,stack stucks the whole process untill the current change is applied , but fiber sides up the change and then executes the below code ,
+stack wasnt  as efficient and optimised  as the fiber is ,stack stucks the whole process untill the current change is applied , but fiber sides up the change and then executes the below code ,
 so the VDOM is the Fiber tree */
 
 //----------------------------------------------------------------
