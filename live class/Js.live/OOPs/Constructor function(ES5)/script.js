@@ -76,7 +76,7 @@ newBook3.summaryofBook();
 
 /* this method significantly reduces the code length and the repition of the code for each book props */
 
-//new is the keyword that is used to make the instance of the properties
+//new is the operator  that is used to make the instance of the properties
 // of the constructor function and returns the object
 
 
@@ -154,9 +154,9 @@ MakeStudents, now it can acccess the contents of the MakeStudents wihtout being 
  */
 
 
-let std1 = new MakeStudents("Piyush",46,true,89724389724387);
-std1.showProfile();// instead of console.log(std1.showProfile)
-// std 1 ke obj mei dhundhenga pehle fir nahi mila toh prototype mei se inherit karenga 
+let Student1 = new MakeStudents("Piyush",46,true,89724389724387);
+student1.showProfile();// instead of console.log(std1.showProfile)
+// std 1 ke obj mei dhundhenga pehle fir nahi mila toh prototype mei se inherit karenga
 
 
 
