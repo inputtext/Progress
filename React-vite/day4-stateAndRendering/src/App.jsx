@@ -1,33 +1,48 @@
 import React , {useState} from "react";
-
 const App = ()=>{
 
   let [count,setCount] = useState(0);
 
   let [flag,setFlag] = useState(true);
 
-  let [reset,setReset] =useState(0);
+
 
   return(
-    <div>
-      <h1> Count is : {count}</h1>
+    <div className="bg-indigo-400">
+      <h1 className="bg-red-" className="text-9xl"> Count is : {count}</h1>
       <button onClick={()=>{
-        setCount(count+=1);
-      }}>INCREMENT</button>
+        setCount((prev)=>{
+          prev+=1;
+          return prev; //expilcit return
+        });
+      }}>INCRE</button>
 
       <button onClick={()=>{
         setFlag(false);
         setCount(count+=10);
         console.log(flag);
-      }}>Flag</button>
+      }}>inc by 10</button>
 
       <button onClick={()=>{
-        setReset();
         setCount(count-count);
-        console.log(reset);
       }}>Reset</button>
+
+      <button onClick={()=>{
+        setCount(count-=1)
+      }}>dec</button>
     </div>
   );
 };
 
 export default App;
+
+
+//notes
+ {/*  <button onClick={()=>{
+        setCount(count+1); // on call , re renders the whole jsx functional component
+        setCount(count+1); // on call , re renders the whole jsx functional component
+        setCount(count+1); // on call , re renders the whole jsx functional component
+      }}>INCREMENT</button> */}
+
+
+/*  setCount((prev)=>prev+1) /implicit return */
