@@ -1,20 +1,55 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Card from './components/Card';
 import Contact from './components/Contact';
 import About from './components/About';
 
 const Web = () => {
 
-    let arr = [ 1,2,3,6,7,9,3,5,4,3,6,6,7,8,8,9,10];
+    let [name,setName] = useState("");
+    console.log(name);
+    let [email,setEmail] =useState("");
+    console.log(email);
+    let [password,setPassword] =useState("");
+    console.log(password);
 
 
 
-    return (
-    <div>
-        {arr.map((elem,index)=>{
-            return <Card key={index}></Card>// key is an attribute which is passed as a unique key to make eveyr elem unique ,key is a prop
-        })}
-    </div>
+
+
+
+
+    return(
+        <div className='flex flex-col gap-5 w-50 p-4 bg-rose-300 align-middle justify-between'>
+            <input
+                onChange={(e)=>{
+                    setName(e.target.value);
+                }}
+                className='border-2'
+                type="text"
+                placeholder='Name'
+            />
+            <input
+                onChange={(e)=>{
+                    setEmail(e.target.value)
+                }}
+                className='border-2'
+                type="text"
+                placeholder='Email'
+            />
+            <input
+                onChange={(e)=>{
+                    setPassword(e.target.value);
+                }}
+                className='border-2'
+                type="text"
+                placeholder='PassWord'
+            />
+            <button className='border-2'>Submit</button>
+
+            <h1>your name is : {name}</h1>
+            <h1>your email is : {email}</h1>
+            <h1>your pasword is : {password}</h1>
+        </div>
     )
 };
 
