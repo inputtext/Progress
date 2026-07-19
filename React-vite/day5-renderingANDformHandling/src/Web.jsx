@@ -3,6 +3,8 @@ import Card from './components/Card';
 import Contact from './components/Contact';
 import About from './components/About';
 
+
+// bruteforce method of input handling .
 const Web = () => {
 
     let [name,setName] = useState("");
