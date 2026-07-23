@@ -11,11 +11,14 @@ const BestApproach = () => {
     }
     return (
     <div>
-        <input onChange={handleChange}
-        className='h-10 w-50 bg-amber-200' />
-        <input onChange={handleChange}
+        <input
+        name='name'
+        onChange={handleChange}
+        className='h-10 w-50 bg-amber-200'
+        type='name'placeholder='name'/>
+        <input name="email" onChange={handleChange}
         className='h-10 w-50 bg-amber-200'/>
-        <input onChange={handleChange}
+        <input name='password'  onChange={handleChange}
         className='h-10 w-50 bg-amber-200' />
     </div>
     )
