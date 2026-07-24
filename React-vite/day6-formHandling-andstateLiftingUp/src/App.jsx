@@ -7,7 +7,7 @@ const App = () => {
 
   return (
     <div
-      className='h-screen bg-indigo-300 border-b border-gray-500 flex justify-center items-center gap-4'
+      className='h-screen bg-indigo-300 border-b border-gray-500  flex justify-center items-center gap-4'
     >
       {toggle ? <Login setToogle={setToggle} /> : <Register setToggle = {setToggle}/>}
     </div>
