@@ -2,7 +2,11 @@ import React, { useState } from 'react'
 
 const Register = ({setToggle}) => {
 
-    let [formData,setFormData]= useState({});
+    let [formData,setFormData]= useState({
+        name : "piyush",
+        email : "piyush@gmail.com",
+        password : "password"
+    });
     let [userData,setUserData]= useState([]);
 
     let handleChange = (e)=>{
@@ -12,14 +16,14 @@ const Register = ({setToggle}) => {
     let handleSubmit = (e)=>{
         e.preventDefault();
         setUserData([...userData,formData]);
-        //set function updates the state and rerenders the parent component 
-
-
-    }
-
-
-
-
+        //set-function updates the state and rerenders the parent component
+        // Refreshing the form after submitting
+        setFormData({
+            name:"",
+            email: "",
+            password: ""
+        }); //after this , call it on the register button using onChange={handleSubmit} even
+    };
 
 
     return (
@@ -28,6 +32,8 @@ const Register = ({setToggle}) => {
         <form onSubmit={handleSubmit} className='flex flex-col gap-2.5 ' action="">
 
             <input
+            required // validation
+            value={formData.name} // 2way binding : displays the defualt name in the form
             name='name'
             onChange={handleChange}
             className='p-5 border-b border-indigo-400 hover:bg-indigo-300 rounded-xl shadow-xl'
@@ -35,6 +41,8 @@ const Register = ({setToggle}) => {
             placeholder='Name'
             />
             <input
+            required //validation
+            value={formData.email}
             name='email'
             onChange={handleChange}
             className='p-5 border-b border-indigo-400 hover:bg-indigo-300 rounded-xl shadow-xl'
@@ -42,21 +50,31 @@ const Register = ({setToggle}) => {
             placeholder='Email'
             />
             <input
+            required //validation
+            value={formData.password}
             name='password'
             onChange={handleChange}
             className='p-5 border-b border-indigo-400 hover:bg-indigo-300 rounded-xl shadow-xl'
             type="password"
             placeholder='Password'
             />
-            <button className='p-3 text-white bg-indigo-600 rounded-xl'>Register</button>
+            <button  className='p-3 text-white bg-indigo-600 rounded-xl'>Register</button>
         </form>
         <p className='flex flex-col justify-center items-center'>Have an Account?
             <span className='text-indigo-500 cursor-pointer'
             onClick={()=>{
-            setToggle((prev) =>!prev);
+                setToggle((prevState)=>!prevState)
             }}>Login here</span></p>
     </div>
     )
 }
 
 export default Register
+
+
+
+
+
+
+
+//2 way binding &
