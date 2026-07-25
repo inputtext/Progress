@@ -17,14 +17,14 @@ const Login = ({setToogle}) => {
 
     let handleSubmit = (e)=>{
         e.preventDefault();
-        setUserData(...userData,formData); //user ka data from data mei push kar rahe
+        setUserData([...userData, formData]); // user ka data array mei add kar rahe
     }
 
 
     return (
     <div className='bg-indigo-200 w-100 p-5 drop-shadow-2xl flex justify-center flex-col rounded-xl gap-5'>
         <h3 className='flex flex-col items-center justify-center p-2.5 '>Login Page</h3>
-        <form onChange={handleSubmit} className='flex flex-col gap-2.5 ' action="">
+        <form onSubmit={handleSubmit} className='flex flex-col gap-2.5 ' action="">
             <input
             required
             name='email'
