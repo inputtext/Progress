@@ -1,5 +1,6 @@
 import React, { useRef } from 'react'
 import Form from "./components/Form"
+import ReactHookForm from './components/ReactHookForm';
 
 const App = () => {
 
@@ -11,7 +12,7 @@ const App = () => {
   return (
     <div className='flex flex-col justify-center items-center bg-purple-950 h-screen gap-5'>
       <h1 className='text-white'>THIS IS FORM HANDLING</h1>
-      <Form/>
+      <ReactHookForm/>
 
       {/*  <input ref={inpRef} type="text" placeholder='text' />
       <button onClick={()=>{
