@@ -6,18 +6,33 @@ import Form from "./components/Form"
 const App = () => {
 
   let[toggle,setToggle] =useState(false);
+   let [users,setUsers] =useState([]); //StateLifting up : pasted the users state her einstead of the form to transfer that data into the childs of the app
+   let [editIndex,setEditIndex] = useState(null);
+
+   const deleteUser = (index)=>{
+    setUsers((prev)=>prev.filter((elem,i)=>i !== index));
+   }
+
+   const updateUser = (index)=>{
+    setEditIndex(index);
+    setToggle(false);
+   }
 
   return (
     <div className='h-screen p-5 flex flex-col gap-4'>
-      <Navbar setToggle={setToggle}></Navbar>
+      <Navbar setToggle={setToggle} setEditIndex={setEditIndex}></Navbar>
 
       {toggle?
-      (<div className='flex p-5'>
-        <UserCard></UserCard>
+      (<div className='flex p-5 gap-5 flex-wrap'>
+        {
+          users.map((elem,index)=>{/*  passed the user for each element/user in the array in usercard */
+            return <UserCard key={index} user={elem} index={index} deleteUser={deleteUser} updateUser={updateUser}/>
+          })
+        }
       </div>)
       :
       (<div className='flex flex-col justify-center items-center '>
-        <Form></Form>
+        <Form setUsers={setUsers} setToggle ={setToggle} editIndex={editIndex} setEditIndex={setEditIndex} userToEdit={users[editIndex]}></Form>
       </div>)}
     </div>
   )

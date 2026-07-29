@@ -1,7 +1,10 @@
-import React from 'react'
+import {useEffect} from "react"
 import {useForm} from "react-hook-form"
 
-const Form = () => {
+
+const Form = ({setUsers ,setToggle,editIndex,setEditIndex,userToEdit}) => {
+
+
     let {register,
         handleSubmit,
         reset,
@@ -10,16 +13,29 @@ const Form = () => {
         mode:"onChange",
     });
 
+    useEffect(()=>{
+        if(userToEdit){
+            reset(userToEdit);
+        }
+    },[userToEdit,reset]);
 
     console.log(errors);
 
 
     return (
     <div className='flex flex-col gap-5 w-100 h-auto     bg-amber-200 p-5 justify-center items-center rounded-xl'>
-        <h1>Create user</h1>
-        <form onSubmit={handleSubmit((data)=>{
-            console.log(data);//this gives the data onto the console after submitting the form in the form of object
-            reset(); //this resets the form after submission
+        <h1>{editIndex !== null ? "Update user" : "Create user"}</h1>
+        <form onSubmit={handleSubmit((data)=>{        //this data has all the data of the form created , thats why we are putting it into the new array of he user
+            console.log(data);                       //this gives the data onto the console after submitting the form in the form of object
+            reset();                                //this resets the form after submission
+            if(editIndex !== null){
+                setUsers((prev)=>prev.map((elem,index)=>index === editIndex ? data : elem));
+                setEditIndex(null);
+            }
+            else{
+                setUsers((prev)=>[...prev,data]);      //inside the new reference of the array , we are putting the data of useres created via form
+            }
+            setToggle(true);
         })}
         className='flex flex-col gap-3 w-75'>
 
@@ -27,13 +43,13 @@ const Form = () => {
             <input
             {...register("name",{
                 required:"Name is required", //errors.name.message == name is required
-                minLength : {
-                    value : 20,
-                    message :"min 6 letters are req"
-                },
                 maxLength : {
                     value : 20,
                     message :"max 20 letters are req"
+                },
+                pattern:{
+                    value: /^[A-Za-z]+(?: [A-Za-z]+)*$/,
+                    message: "blank spaces are not allowed"
                 },
             })
             }
@@ -91,7 +107,8 @@ const Form = () => {
             {errors.image && <p className='text-red-500 rounded-xl '>{errors.image.message}</p>}
 
 
-            <button className='p-3 bg-indigo-200 rounded-xl cursor-pointer' >Add user</button>
+            <button
+            className='p-3 bg-indigo-200 rounded-xl cursor-pointer' >{editIndex !== null ? "Update user" : "Add user"}</button>
         </form>
     </div>
     )
@@ -110,3 +127,12 @@ notes
 
 {errors.email && <p className='bg-red-800 rounded-xl p-1 w-fit'>please provide email</p>} :  if the left side is truthy , then render right side , if the errors.name = {} or required , it will render the p tag
  */
+
+
+/*
+<form onSubmit={handleSubmit((data)=>{ //this data has all the data of the form created , thats why we are putting it into the new array of he user
+            console.log(data);//this gives the data onto the console after submitting the form in the form of object
+            reset(); //this resets the form after submission
+            setUsers([...users,data]); //inside the new reference of the array , we are putting the data of useres created via form
+        })}
+        classNam */
