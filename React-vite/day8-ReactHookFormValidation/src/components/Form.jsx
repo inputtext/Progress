@@ -6,7 +6,9 @@ const Form = () => {
         handleSubmit,
         reset,
         formState:{errors},
-    } =useForm();
+    } =useForm({
+        mode:"onChange",
+    });
 
 
     console.log(errors);
@@ -24,7 +26,15 @@ const Form = () => {
 
             <input
             {...register("name",{
-                required:"Name is required" //errors.name.message == name is required
+                required:"Name is required", //errors.name.message == name is required
+                minLength : {
+                    value : 20,
+                    message :"min 6 letters are req"
+                },
+                maxLength : {
+                    value : 20,
+                    message :"max 20 letters are req"
+                },
             })
             }
             className=' border-amber-300 bg-orange-300 rounded p-2'
@@ -36,7 +46,11 @@ const Form = () => {
 
             <input
             {...register("email",{
-                required:"Email is required" //errors.email.message == Email is required
+                required:"Email is required", //errors.email.message == Email is required
+                pattern :{
+                    value:  /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+                    message : "pls enter a valid email"
+                }
             }
             )}
             className=' border-amber-500 bg-orange-300 rounded p-2'
@@ -52,6 +66,10 @@ const Form = () => {
                 minLength : {  // for validating the 10 digits of mobile number
                     value : 10,
                     message: "minimum 10 digits are required"
+                },
+                maxLength: {
+                    value: 10,
+                    message : "Max 10 digits are required"
                 },
             })}
             className=' border-amber-300 bg-orange-300 rounded p-2'
