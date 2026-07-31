@@ -12,7 +12,7 @@ const socials = [
   },
   {
     icon: FiTwitter,
-    url: "https://x.com/YOUR_USERNAME",
+    url: "https://x.com/@PK6655665577",
   },
 ];
 
