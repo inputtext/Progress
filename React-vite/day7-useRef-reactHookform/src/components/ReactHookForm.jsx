@@ -3,18 +3,15 @@ import {useForm} from 'react-hook-form'
 
 const ReactHookForm = () => {
 
+
     let
     { //destructuring the required things from the object with methods
         register,
         handleSubmit,
         reset,
-        formState:{errors},
+        /* formState:{errors}, */
     } = useForm();
     /* console.log(data) */; //gives an object with methods
-
-
-
-
 
 
     return (
