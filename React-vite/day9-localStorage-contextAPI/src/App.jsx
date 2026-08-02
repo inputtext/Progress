@@ -6,9 +6,21 @@ import Form from "./components/Form"
 const App = () => {
 
 
-  localStorage.setItem("name","kanijiuya");
+  localStorage.setItem("name","kanojiya");
   let naam= localStorage.getItem("name");
   console.log(naam);
+
+  let obj ={
+    name : "piyush",
+    age  : 22,
+    address : "NA"
+  };
+
+  localStorage.setItem("user",JSON.stringify(obj));
+  let lsd=localStorage.getItem("user");
+  console.log(JSON.parse(lsd));//object as an output
+  console.log(/* JSON.parse */(lsd));//string as an output
+
 
 
 
