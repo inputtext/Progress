@@ -21,7 +21,7 @@ const UserCard = ({user,index,deleteUser,updateUser}) => {
                 className='bg-purple-200 w-25 rounded p-3 cursor-pointer'>Update</button>
                 <button
                 onClick={()=>{
-                    deleteUser(index)
+                    deleteUser(index,user)
                 }}
                 className='bg-red-300 w-25 rounded p-3 cursor-pointer'>Delete</button>
             </div>

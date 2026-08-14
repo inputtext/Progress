@@ -14,12 +14,14 @@ const Form = ({users,setUsers ,setToggle,editIndex,setEditIndex,userToEdit}) => 
     });
 
     useEffect(()=>{
-        if(userToEdit){
+        if(userToEdit){// finding which user to edit in the array via userToEdit
+            // Fill the form with the selected user's data when editing
             reset(userToEdit);
         }
-    },[userToEdit,reset]);
+    },[userToEdit,reset]); //It only fills the form fields with the selected user's existing data.
 
     console.log(errors);
+
 
 
     return (
@@ -29,12 +31,17 @@ const Form = ({users,setUsers ,setToggle,editIndex,setEditIndex,userToEdit}) => 
             console.log(data);                       //this gives the data onto the console after submitting the form in the form of object
             reset();                                //this resets the form after submission
             if(editIndex !== null){
-                setUsers((prev)=>prev.map((elem,index)=>index === editIndex ? data : elem));
+                setUsers((prev)=>{
+                    let arr = prev.map((elem,index)=>index === editIndex ? data : elem);
+                    localStorage.setItem("users",JSON.stringify(arr));
+                    return arr;
+                });
                 setEditIndex(null);
             }
             else{
-                setUsers([...users,data]);//inside the new reference of the array , we are putting the data of user created via form
-                localStorage.setItem("users",JSON.stringify(users));//setting the created users into the localtorage
+                let arr = [...users,data]; //inside the new reference of the array , we are putting the data of user created via form
+                setUsers(arr);// async code
+                localStorage.setItem("users",JSON.stringify(arr));//setting the created users into the localtorage
             }
             setToggle(true);
         })}
