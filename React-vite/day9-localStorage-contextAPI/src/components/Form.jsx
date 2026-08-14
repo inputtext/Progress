@@ -2,7 +2,7 @@ import {useEffect} from "react"
 import {useForm} from "react-hook-form"
 
 
-const Form = ({setUsers ,setToggle,editIndex,setEditIndex,userToEdit}) => {
+const Form = ({users,setUsers ,setToggle,editIndex,setEditIndex,userToEdit}) => {
 
 
     let {register,
@@ -10,7 +10,7 @@ const Form = ({setUsers ,setToggle,editIndex,setEditIndex,userToEdit}) => {
         reset,
         formState:{errors},
     } =useForm({
-        mode:"onChange",// turant change karta hai 
+        mode:"onChange",// turant change karta hai
     });
 
     useEffect(()=>{
@@ -33,7 +33,8 @@ const Form = ({setUsers ,setToggle,editIndex,setEditIndex,userToEdit}) => {
                 setEditIndex(null);
             }
             else{
-                setUsers((prev)=>[...prev,data]);      //inside the new reference of the array , we are putting the data of useres created via form
+                setUsers([...users,data]);//inside the new reference of the array , we are putting the data of user created via form
+                localStorage.setItem("users",JSON.stringify(users));//setting the created users into the localtorage
             }
             setToggle(true);
         })}

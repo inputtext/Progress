@@ -6,6 +6,7 @@ import Form from "./components/Form"
 const App = () => {
 
 
+  /* LOCAL STORAGE */
   localStorage.setItem("name","kanojiya");
   let naam= localStorage.getItem("name");
   console.log(naam);
@@ -24,18 +25,19 @@ const App = () => {
 
 
 
-  let[toggle,setToggle] =useState(false);
-   let [users,setUsers] =useState([]); //StateLifting up : pasted the users state her einstead of the form to transfer that data into the childs of the app
-   let [editIndex,setEditIndex] = useState(null);
+    /* States */
+    let[toggle,setToggle] =useState(false);
+    let [users,setUsers] =useState(  JSON.parse(localStorage.getItem("users"))||[]); //StateLifting up : pasted the users state her einstead of the form to transfer that data into the childs of the app
+    let [editIndex,setEditIndex] = useState(null);
 
-   const deleteUser = (index)=>{
-    setUsers((prev)=>prev.filter((elem,i)=>i !== index));
-   }
+    const deleteUser = (index)=>{
+      setUsers((prev)=>prev.filter((elem,i)=>i !== index));
+    }
 
-   const updateUser = (index)=>{
-    setEditIndex(index);
-    setToggle(false);
-   }
+    const updateUser = (index)=>{
+      setEditIndex(index);
+      setToggle(false);
+    }
 
   return (
     <div className='h-screen p-5 flex flex-col gap-4'>
@@ -51,7 +53,7 @@ const App = () => {
       </div>)
       :
       (<div className='flex flex-col justify-center items-center '>
-        <Form setUsers={setUsers} setToggle ={setToggle} editIndex={editIndex} setEditIndex={setEditIndex} userToEdit={users[editIndex]}></Form>
+        <Form  users={users} setUsers={setUsers} setToggle ={setToggle} editIndex={editIndex} setEditIndex={setEditIndex} userToEdit={users[editIndex]}></Form>
       </div>)}
     </div>
   )
