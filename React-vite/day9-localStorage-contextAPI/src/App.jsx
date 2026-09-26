@@ -39,7 +39,7 @@ const App = () => {
     /* States */
     let[toggle,setToggle] =useState(true);
     let [users,setUsers] =useState(getStoredUsers); //StateLifting up : pasted the users state her einstead of the form to transfer that data into the childs of the app
-    let [editIndex,setEditIndex] = useState(null); // for update functinality 
+    let [editIndex,setEditIndex] = useState(null); // for update functinality
 
     const deleteUser = (index)=>{ // this index is comming from the usercard , usercard=>{index}=>giving user clicked on
       setUsers((prev)=>{ // runs atlast(async) , prev is the current value of the arr , prev=[user1, ...users]

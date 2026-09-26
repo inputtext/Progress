@@ -9,7 +9,7 @@ const Form = () => {
 
 
     let handleSubmit =(e)=>{
-        e.preventDefault();
+        e.preventDefault(); 
         console.log(formRef.current.productName.value);
         console.log(formRef.current.price.value);
         console.log(formRef.current.Category.value);
