@@ -1,0 +1,64 @@
+@font-face {
+    font-family: cook;
+    src: url(./Cookie-Regular.ttf);
+}
+
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    position:relative;
+}
+
+.b1{
+    height: 10%;
+    width: 10%;
+    background-color: burlywood;
+    margin: 5px;
+    position: absolute;
+    left: 50%;
+    top: 33%;
+    /* to center the div  */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;/* jiska z index jyada woh uppar */
+}
+.b2{
+    height: 10%;
+    width: 10%;
+    background-color: brown;
+    margin: 5px;
+    position:absolute;
+    left: 3px;
+    left: 50%;
+    top:30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+h1{
+    height: 50%;
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 10;
+    font-family:cook;
+    font-size: 75px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+h1 span{
+    font-weight: 900;
+}
