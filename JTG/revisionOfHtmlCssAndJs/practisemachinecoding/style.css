@@ -1,0 +1,175 @@
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6fb;
+    color: #1f2937;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+/* Main Container */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: #6b7280;
+    margin-bottom: 28px;
+    line-height: 1.5;
+}
+
+/* Search and Filter */
+.filters {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    background: white;
+    color: #1f2937;
+    font-size: 15px;
+    outline: none;
+}
+
+input {
+    flex: 2;
+    min-width: 0;
+}
+
+select {
+    flex: 1;
+    min-width: 140px;
+    cursor: pointer;
+}
+
+input:focus,
+select:focus {
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 3px
+        rgba(79, 70, 229, 0.12);
+}
+
+/* Result Count */
+.result-count {
+    color: #6b7280;
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
+/* Student Grid */
+.student-grid {
+    display: grid;
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+/* Student Card */
+.student-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 22px;
+
+    box-shadow:
+        0 3px 10px rgba(15, 23, 42, 0.04);
+
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s;
+}
+
+.student-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 22px rgba(15, 23, 42, 0.08);
+}
+
+.student-card h2 {
+    font-size: 18px;
+    margin-bottom: 14px;
+    overflow-wrap: anywhere;
+}
+
+/* Department Badge */
+.department {
+    display: inline-block;
+    background: #eef2ff;
+    color: #4338ca;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    padding: 6px 10px;
+    border-radius: 20px;
+    margin-bottom: 14px;
+}
+
+/* Graduation Year */
+.year {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+/* Empty State */
+.empty-state {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 50px 20px;
+
+    background: white;
+    border: 1px dashed #d1d5db;
+    border-radius: 12px;
+
+    color: #6b7280;
+}
+
+/* Tablet */
+@media (max-width: 700px) {
+    .student-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    body {
+        padding: 28px 14px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    .filters {
+        flex-direction: column;
+    }
+
+    select {
+        min-width: 0;
+    }
+
+    .student-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -65,13 +65,33 @@ nav{
     display:flex;
     flex-direction: column;
     transform: translate(0%,-5%);
-}
 
+}
+.text-mid-left .textleft{
+    display: flex;
+
+    position: relative;
+}
+.textleft img{
+    height: 100px;
+    width: 400px;
+    border-radius: 300px;
+    position: absolute;
+    left: 70%;
+    top: 20%;
+}
 .button-mid-left-down{
      display:flex;
     transform: translate(0%,-5%);
 }
-
+/* .middle .text-mid-left .textleft h1{
+    font-weight: 900;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.middle .text-mid-left h1{
+    font-weight: 900;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+} */
 .b1{
     padding: 10px;
     margin: 15px;
@@ -89,4 +109,20 @@ nav{
     background-color: transparent;
     border: 2px solid black;
 
+}
+
+nav a{
+    color: black;
+    text-decoration:none;
+    font-size: 25px;
+    font-weight:100;
+}
+.middle span{
+    font-size: x-small;
+    background-color: #fff;
+}
+
+.text-mid-right{
+    display: flex;
+    flex-direction: column;
 }

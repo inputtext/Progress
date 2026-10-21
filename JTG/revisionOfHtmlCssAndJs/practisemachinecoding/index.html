@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Directory</title>
+
+    <!-- Connect CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container">
+
+        <h1>Student Directory</h1>
+
+        <p class="subtitle">
+            Search students and filter them by department.
+        </p>
+
+        <!-- Search and Filter -->
+        <div class="filters">
+
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="Search by student name..."
+                aria-label="Search students by name"
+            >
+
+
+            <select
+                id="departmentFilter"
+                aria-label="Filter by department"
+            >
+                <option value="All">All Departments</option>
+                <option value="CSE">CSE</option>
+                <option value="IT">IT</option>
+                <option value="ECE">ECE</option>
+            </select>
+
+        </div>
+
+        <!-- Result Count -->
+        <p id="resultCount" class="result-count"
+           aria-live="polite"></p>
+
+        <!-- Student Cards -->
+        <section
+            id="studentGrid"
+            class="student-grid"
+            aria-label="Student results"
+        ></section>
+
+    </main>
+
+    <!-- Connect JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
