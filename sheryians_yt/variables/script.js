@@ -29,7 +29,8 @@ let aa=100;
 
 
 
-
+/* declare matlab naam dena
+init matlab value dena  */
 
 
 
