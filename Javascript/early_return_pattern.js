@@ -38,21 +38,21 @@ function game(user,computer){
 
 }
 
-console.log((rock,scissors));
+console.log((rock,scissors))
 
 /* conditions !! brute force
 rock paper scissors
 
 rock scissors
-rock paper 
+rock paper
 
 paper sci
 sci paper
 
-sci paper 
+sci paper
 sci rock
 
-sci sci 
-rock rock 
+sci sci
+rock rock
 paper paper
  */
