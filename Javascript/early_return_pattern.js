@@ -36,7 +36,7 @@ function game(user,computer){
     if(user === scissors && computer=== paper) return "user Won";
     if(user === rock && computer=== paper ) return "user Won";
 
-}
+};
 
 console.log((rock,scissors))
 
